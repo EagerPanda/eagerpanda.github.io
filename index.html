@@ -1,0 +1,446 @@
+
+<!-- saved from url=(0022)http://eagerpanda.com/ -->
+<html class="wf-bebasneue-n4-active wf-sourcesanspro-i2-active wf-sourcesanspro-i3-active wf-sourcesanspro-i4-active wf-sourcesanspro-i6-active wf-sourcesanspro-i7-active wf-sourcesanspro-n2-active wf-sourcesanspro-n3-active wf-sourcesanspro-n4-active wf-sourcesanspro-n6-active wf-sourcesanspro-n7-active wf-active"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>EagerPanda</title>
+  <link href="./EagerPanda_files/css" rel="stylesheet" type="text/css">
+  <style>
+    html {
+      width: 100%;
+    }
+    body {
+      margin: 0;
+      min-width: 940px;
+      min-height: 700px;
+      background-image: url(http://media.eagerpanda.com/eagle1364.jpg);
+      background-size: cover;
+      text-rendering: optimizeLegibility;
+      background-repeat: no-repeat;
+      background-position: center center;
+      width: 100%;
+      display: block;
+    }
+    #modal, #last-step, #enter-invite-code, #login-error, #enter-enamil-no-code {
+      display: none;
+    }
+    #logo {
+      width: 252px;
+    }
+    #top {
+      position: relative;
+      text-align: center;
+      margin: 0 auto;
+      margin-top: 20px;
+      width: 100%;
+      max-width: 1166px;
+    }
+    #top p {
+      font-family: 'source-sans-pro';
+      font-weight: 300;
+      font-size: 36px;
+      -moz-opacity: 0.67;
+      -khtml-opacity: 0.67;
+      opacity: 0.67;
+    }
+    #fbactions {
+      position: absolute;
+      top: 20px;
+      right: 0;
+      font-family: 'bebas-neue';
+      font-size: 27px;
+      color: #ffffff;
+    }
+    #login, #signup {
+      width: 262px;
+      text-align: center;
+      padding: 10px 0;
+      background-color: #3b5999;
+      -moz-opacity: 0.67;
+      -khtml-opacity: 0.67;
+      opacity: 0.67;
+      text-rendering: optimizeLegibility;
+      cursor: pointer
+    }
+    #login a, #signup span {
+      color: white;
+      text-decoration: none;
+      -moz-opacity: 0.67;
+      -khtml-opacity: 0.67;
+      opacity: 0.67;
+    }
+    #login {
+      margin-bottom: 10px;
+    }
+    #bottom {
+      font-family: 'source-sans-pro';
+      font-size: 24px;
+      font-weight: 400;
+      color: white;
+      color: rgba(255,255,255,.67);
+      text-align: center;
+      width: 390px;
+      margin: 0 auto;
+    }
+    #bottom-wrapper {
+      position: absolute;
+      margin-top: 200px;
+      width: 100%;
+    }
+    input {
+      font-family: 'source-sans-pro';
+      border: none;
+      background: none;
+      border-bottom: 1px solid #fff;
+      outline: none;
+      line-height: 24px;
+      font-size: 24px;
+      color: #fff;
+    }
+    #early-email-button {
+      margin-top: 38px;
+      background-color: #38455f;
+      /*background-color: rgba(255,255,255,.17);*/
+      width: 100%;
+      border: none;
+      padding: 10px 0;
+      font-size: 27px;
+      font-family: 'bebas-neue';
+      outline: none;
+      cursor: pointer;
+      color: #d1d1d1;
+    }
+    #early-email-button:hover {
+      background-color: #303f6b;
+      /*background-color:  rgba(255,255,255,.34)*/
+    }
+    #modal {
+      background-color: black;
+      background-color: rgba(0,0,0,.83);
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left 0;
+    }
+    #modal input {
+      font-family: 'bebas-neue';
+      font-size: 36px;
+      display: block;
+      width: 100%;
+      text-align: center;
+    }
+    #modal h1 {
+      font-family: 'bebas-neue';
+      font-size: 36px;
+      color: #ababab;
+    }
+    .nocode, #enter-another {
+      text-align: left;
+      width: 100%;
+      display: block;
+      font-family: 'lato';
+      font-weight: 400;
+      color: #4484a8;
+      height: 0;
+    }
+
+    #enter-another {
+      font-size: 18px;
+      text-align: center;
+    }
+
+    #modal-wrapper {
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center;
+    }
+    #last-step [type="submit"], #enter-invite-code [type="submit"], #login-error [type="submit"], #enter-enamil-no-code [type="submit"]{
+      font-size: 27px;
+    }
+    #enter-invite-code, #last-step, #login-error, #enter-enamil-no-code {
+      width: 250px;
+      padding: 40px 50px;
+      margin: 0 auto;
+      background-color: black;
+      color: white;
+      position: relative;
+      font-family: 'source-sans-pro';
+      color: #7d7d7d;
+      font-size: 14px;
+    }
+    #enter-invite-code a {
+      display: inline-block;
+    }
+    #enter-invite-code h1 {
+      margin-top: 40px;
+    }
+    [type="submit"]{
+      margin-top: 60px;
+      background-color: #4484a8;
+      font-family: 'bebas-neue';
+      width: 100%;
+      padding: 10px 0;
+      border: none;
+      cursor: pointer;
+    }
+    .close {
+      color: #d9d9d9;
+      font-family: 'lato';
+      position: absolute;
+      top: -24px;
+      right: 0;
+      cursor: pointer;
+    }
+    .nocode, #enter-another { cursor: pointer;}
+    .nocode:hover, #enter-another:hover { text-decoration: underline;}
+
+    #response-msg-container{
+      display:none;
+    }
+  </style>
+  <!--[if lt IE 9]>
+    <script src="http://opsworks-static.eagerpanda.com/static/scripts/lib/html5shiv.js"></script>
+  <![endif]--><style type="text/css">.tk-bebas-neue{font-family:"bebas-neue",sans-serif;}.tk-source-sans-pro{font-family:"source-sans-pro",sans-serif;}</style><link rel="stylesheet" href="./EagerPanda_files/l" media="all">
+  </head><body><input type="hidden" name="csrfmiddlewaretoken" value="1yKn6V6XtP72goZPbIHBWnKwqqsIcVO3">
+  <script type="text/javascript" src="./EagerPanda_files/qfn4qze.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+
+  <div id="top">
+    <img id="logo" src="./EagerPanda_files/eagerpanda_logo.png">
+    <!--<div id='fbactions'>
+      <div id='login'><a href='/facebook/login'>LOGIN WITH FACEBOOK</a></div>
+      <div id='signup'><span>SIGNUP WITH FACEBOOK</span></div>
+    </div>-->
+    <p>
+      Building the most Beautiful and Organized<br>
+      Repository of Knowledge<br>
+      on the Internet<br>
+    </p>
+  </div>
+  <div id="bottom-wrapper">
+    <div id="bottom">
+      <div id="want-early">
+        <div>
+          My email is <input id="early-email">
+        </div>
+        <button id="early-email-button">I Want Early Access</button>
+      </div>
+      <div id="response-msg-container">
+        <div id="response-msg">
+        </div>
+        
+        <a id="enter-another">Enter another email</a>
+        
+      </div>
+    </div>
+  </div>
+  <div id="modal">
+    <div id="modal-wrapper">
+      <div id="login-error">
+        <span class="close">X</span>
+        <div class="modal">
+          <h1>OOPS!</h1>
+          <p id="error-msg"></p>
+          <input name="email" type="text" id="error-modal-email">
+          <input type="submit" value="I Want Early Access" id="error-modal-submit">
+        </div>
+      </div>
+
+      <!-- need to do -->
+      <!-- <div id='last-step'>
+        <span class='close'>X</span>
+        <h1>Enter Your Email</h1>
+        <p>
+          This helps us  keep you updated on important articles and events based on your interests
+        </p>
+          <input name='email' type="text"  id='email-modal-email' />
+          <input type="submit" value="I Want Early Access" id='email-modal-submit' />
+      </div> -->
+      <!------------------>
+
+       <div id="enter-enamil-no-code">
+        <span class="close">X</span>
+        <h1>Enter Your Email</h1>
+        <p>
+          This will help us notify you as soon as the platform is ready for your use.
+        </p>
+          <input name="email" type="text" id="email-modal-email">
+          <input type="submit" value="I Want Early Access" id="email-modal-submit">
+      </div>
+
+      <div id="enter-invite-code">
+        <span class="close">X</span>
+        <h1>Enter Invite Code</h1>
+        <form action="http://eagerpanda.com/facebook/signup" type="get">
+          <input name="token" class="token">
+          <input type="submit" value="Next">
+          <a class="nocode">I do not have a code</a>
+        </form>
+      </div>
+    </div>
+  </div>
+
+<script>
+  var QueryString = (function () {
+    var vars = {};
+    var d = decodeURIComponent
+    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi,    
+    function(m,key,value) {
+      vars[d(key)] = d(value);
+    });
+    return vars;
+  })();
+  function getCookie(name) {
+    var cookieValue = null;
+    if (document.cookie && document.cookie != '') {
+      var cookies = document.cookie.split(';');
+      for (var i = 0; i < cookies.length; i++) {
+        var cookie = cookies[i].replace(/\s/i,'');
+        // Does this cookie string begin with the name we want?
+        if (cookie.substring(0, name.length + 1) == (name + '=')) {
+          cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+          break;
+        }
+      }
+    }
+    return cookieValue;
+  }
+  var csrftoken = getCookie('csrftoken');
+  function _sendEmail(email, callback) {
+    xhr = new XMLHttpRequest();
+    xhr.open('POST', '/invite', true);
+    xhr.setRequestHeader("X-CSRFToken", csrftoken);
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState == 4 && xhr.status == 200) {
+        callback(xhr.responseText);
+      }
+    }
+    xhr.send(JSON.stringify({email: email}));
+  }
+  function sendEmail(email) {
+    if (emailRegex.test(email)) {
+      _sendEmail(email, function(response) {
+        response = JSON.parse(response)
+        closeModals();
+        earlyDiv.style.display = 'none';
+        earlyDivResponse.innerHTML = response.status;
+        earlyDivResponseContainer.style.display = 'block';
+      });
+      return true;
+    }
+    return false
+  }
+  function closeModals() {
+    modalContainer.style.display = 'none';
+    enterInviteCodeModal.style.display = 'none';
+    errorModal.style.display = "none";
+    enterEmailModal.style.display = 'none';
+  }
+  function showModal(modal) {
+    closeModals();
+    modalContainer.style.display = 'table';
+    modal.style.display = 'block';
+  }
+  var 
+    earlyButton = document.querySelector("#early-email-button"),
+    earlyEmailInput = document.querySelector("input#early-email"),
+    earlyDiv = document.querySelector("#want-early"),
+    enterAnother = document.querySelector("#enter-another"),
+    earlyDivResponseContainer = document.querySelector("#response-msg-container"),
+    earlyDivResponse = document.querySelector("#response-msg"),
+    bottomDiv = document.querySelector("#bottom"),
+    emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+    modalContainer = document.querySelector("#modal"),
+    modalWrapper = document.querySelector("#modal-wrapper"),
+    enterInviteCodeModal = document.querySelector("#enter-invite-code"),
+    signupButton = document.querySelector("#signup"),
+    enterInviteClose = document.querySelector("#enter-invite-code .close"),
+    enterInviteInput = document.querySelector("#enter-invite-code .token"),
+
+
+    enterEmailModal = document.querySelector("#enter-enamil-no-code"),
+    enterEmailModalSubmit = document.querySelector("#email-modal-submit"),
+    enterEmailModalEmail = document.querySelector("#email-modal-email"),
+    enterEmailModalClose = document.querySelector("#enter-enamil-no-code .close")
+    errorModal = document.querySelector("#login-error"),
+    errorModalEmail = document.querySelector("#error-modal-email"),
+    errorModalSubmit = document.querySelector("#error-modal-submit"),
+    errorModalClose = document.querySelector("#login-error .close"),
+    noCode = document.querySelector(".nocode")
+  ;
+  noCode.addEventListener("click", function(ev){
+    showModal(enterEmailModal);
+  })
+
+  enterAnother.addEventListener("click", function(ev){
+    earlyDiv.style.display = 'block'
+    earlyEmailInput.focus()
+    earlyEmailInput.select()
+    earlyDivResponseContainer.style.display = 'none'
+  })
+
+  earlyButton.addEventListener("click", function(ev){
+    var email = earlyEmailInput.value;
+    if ( !sendEmail(email) ) { earlyEmailInput.style.borderColor = "red"; }
+  });
+
+
+  if (QueryString.token) {
+    enterInviteInput.value = QueryString.token
+    showModal(enterInviteCodeModal);
+  }
+
+  signupButton.addEventListener("click", function(ev) {
+    if (QueryString.token) {
+      enterInviteInput.value = QueryString.token
+    }
+    showModal(enterInviteCodeModal);
+  });
+
+
+
+  modalContainer.addEventListener("click", function(ev) {
+    if (modalWrapper == ev.target) {
+      closeModals();
+    }
+  });
+  enterInviteClose.addEventListener("click",closeModals);
+  errorModalClose.addEventListener("click",closeModals);
+  enterEmailModalClose.addEventListener("click",closeModals);
+  
+  function showEnterEmailModal(){
+    showModal(enterEmailModal);
+  }
+  enterEmailModalSubmit.addEventListener("click", function(){
+    var email = enterEmailModalEmail.value;
+    if (!sendEmail(email)) { 
+      enterEmailModalEmail.style.borderColor = "red"; 
+    }
+  });
+  errorModalSubmit.addEventListener("click", function(){
+    var email = errorModalEmail.value;
+    if (!sendEmail(email)) {
+      errorModalEmail.style.borderColor = "red";
+    }
+  });
+
+  var e = QueryString.e[0]
+  if (e) {
+    if (e == 1){
+      document.getElementById('error-msg').innerHTML="It seems that you haven't received a correct token. Please leave us your email and we will notify you as soon as the platform is ready for your use."
+      showModal( errorModal );
+    } else if (e == 2){
+      document.getElementById('error-msg').innerHTML='Please give EagerPanda access to your Facebook. This helps us give you the best, personalized experience.'
+      showModal( errorModal );
+      errorModalEmail.style.display = "none";
+      errorModalSubmit.style.display = "none";
+    } else if (e==3){
+      document.getElementById('error-msg').innerHTML='There has been some error. Please contact bugs@eagerpanda.com'
+      showModal( errorModal );
+      errorModalEmail.style.display = "none";
+      errorModalSubmit.style.display = "none";
+    }    
+  }
+</script>
+
+</body></html>
